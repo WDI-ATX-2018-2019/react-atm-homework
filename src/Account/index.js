@@ -14,6 +14,11 @@ class Account extends Component {
   // }
 
   handleDepositClick = (event) => {
+   
+    if(this.inputBox.value===''){
+      alert("Enter a Valid Amout")
+    }else{
+
     // It is good practice to still prevent default behavior
     event.preventDefault();
     // set a local variable to the amount entered in the text box.
@@ -26,9 +31,15 @@ class Account extends Component {
     })
     // empty out the text box in this component
     this.inputBox.value = ''
+
   }
+  };
 
   handleWithdrawClick = (event) => {
+    
+    if(this.inputBox.value===''){
+      alert("Enter a Valid Amout")
+    } else {
     const amount = parseInt(this.inputBox.value);
 
     const newBalance = this.state.balance - amount;
@@ -37,11 +48,16 @@ class Account extends Component {
         this.setState({
         balance: newBalance
       })
-    }
+      } else {
+          alert("Not enough funds")
+        }
+    
+
+
 
     this.inputBox.value = ''
   }
-  
+  }
 
 
   render() {
