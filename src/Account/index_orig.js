@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 
 
-export default class Account extends Component {
-    state = {
-      balance: 0
+class Account extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      balance: 0,
     };
+    this.handleDepositClick = this.handleDepositClick.bind(this);
+    this.handleWithdrawClick = this.handleWithdrawClick.bind(this);
   }
-  
-  handleDepositClick = (e) => {
+  handleDepositClick(e) {
     // It is good practice to still prevent default behavior
     e.preventDefault();
     // set a local variable to the amount entered in the text box.
@@ -24,8 +27,7 @@ export default class Account extends Component {
     // empty out the text box in this component
     this.inputBox.value = '';
   }
-  
-  handleWithdrawClick= (e) => {
+  handleWithdrawClick(e) {
     // It is good practice to still prevent default behavior
     e.preventDefault();
     // set a local variable to the amount entered in the text box.
