@@ -51,6 +51,26 @@ class Account extends Component {
         }
     }
 
+    // handleTransferClick = (event) => {
+    //     event.preventDefault()
+    //     const amount = parseInt(this.inputBox.value, 10)
+    //     if (this.inputBox.value === '') {
+    //         return false;
+    //     } else if (isNaN(amount)) {
+    //         this.inputBox.value = ''
+    //         return false;
+    //     } else if (this.inputBox.value > this.state.balance) {
+    //         this.inputBox.value = ''
+    //         return false;
+    //     } else {
+    //         const newBalance = this.state.balance - amount
+    //         this.setState({
+    //             balance: newBalance
+    //         })
+    //         this.inputBox.value = ''
+    //     }
+    // }
+
     render() {
 
         return (
@@ -61,7 +81,7 @@ class Account extends Component {
                 <div>
                     <input className="button" type="button" value="Deposit" onClick={this.handleDepositClick} />
                     <input className="button" type="button" value="Withdraw" onClick={this.handleWithdrawClick} />
-                    <input className="button" type="button" value="Transfer" onClick={this.handleTransferClick} />
+                    {/*<input className="button" type="button" value="Transfer" onClick={this.handleTransferClick} />*/}
                 </div>
             </div>
         )
