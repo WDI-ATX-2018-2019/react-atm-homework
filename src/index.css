@@ -1,44 +1,67 @@
-@import url(http://fonts.googleapis.com/css?family=Oleo+Script);
-@import url(http://fonts.googleapis.com/css?family=Ruluko);
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+@import url('https://fonts.googleapis.com/css?family=Bungee');
 
 body {
-  font-family: 'Ruluko', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  color: #4A5759;
+  background-color: #4A5759;
   margin: 0px auto;
   text-align: center;
-  width: 700px;
 }
 
-.header {
-  margin: 50px 0px;
+input {
+  height: 2em;
+  background-color: #DEDBD2;
+  color: #4A5759;
+  border-style: none;
+  padding: 1px;
+  margin: 0.6em;
+  outline: none;
 }
 
-.title {
-  color: #F52F4F;
-  font-family: 'Oleo Script', cursive;
-  font-size: 50px;
+#content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#nav {
+  margin: 50px auto;
+  width: 100%;
 }
 
 .account {
-  background-color: #6C9A74;
-  border: 1px solid #295A33;
-  border-radius: 15px;
-  display: inline-block;
+  flex-grow: 1 auto;
+  box-shadow: 5px 5px 3px 4px #354343;
+  background-color: #B0C4B1;
+  border-radius: 10px;
   margin: 10px;
   padding: 10px;
-  width: 300px;
+  min-width: 300px;
+  max-width: 96%;
 }
 
 .balance {
-  background-color: #E3E3E3;
-  border: 1px solid #676767;
+  background-color: #DEDBD2;
+  box-shadow: 0 0 3px 4px #B0C4B1;
   border-radius: 15px;
-  font-family: 'Ruluko', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 50px;
   margin: 5px;
   padding: 25px 0px;
 }
 
-.zero {
-  background-color: #F52F4F;
-  color: #FFFFFF;
+.button {
+  height: 3em;
+  color: #DEDBD2;
+  background-color: #4A5759;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+#title {
+  color: #EDAFB8;
+  font-size: 3em;
+  font-family: 'Bungee', cursive;
+  text-shadow: 5px 2px 3px #354343;
 }
